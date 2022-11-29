@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+:root{
+    --bg: #2a6aad;
+    --calculator: #798ac1;
+    --bg-grad:linear-gradient(90deg, hsla(55, 90%, 67%, 1) 0%, hsla(173, 87%, 59%, 1) 50%, hsla(107, 88%, 67%, 1) 75%, hsla(149, 89%, 71%, 1) 100%);
+    --font-color: var(--calculator);
+    --btn: #f7f5f9;
+    --btn-hover: #b7b1a9;
+}
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Work Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body {
+    font-size: 14px;
+    background-color: var(--bg);
+}
+.calculator {
+    min-width: 300px;
+    max-width: 500px;
+    margin: 5px auto;
+    border-radius: 4px;
+    background: var(--calculator);
+    background-size: 300% 300%;
+    overflow: hidden;
+    padding: 1.6em;
+}
+.scrncontainer {
+    font-size: 3rem;
+    box-sizing: border-box;
+    margin: 2rem auto;
+    border-radius: 4px;
+    background-color: white;
+    min-height: 120px;
+    padding: 1rem;
+    word-wrap: break-word;
+}
+.operations{
+    box-sizing: border-box;
+    padding: 4px 7px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+#delete{
+    box-sizing: border-box;
+    padding: 10px 30px;
+    font-weight: 500;
+    color: white;
+    background-color: red;
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    float: right;  
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 1rem;
+    padding: 4px 2px;
+}
+.btn {
+    color: var(--font-color);
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 2rem;
+    border-radius: 3px;
+    background-color: var(--btn);
+    border: none;
+    box-shadow: 5px 5px 6px rgba(99, 95, 95, 0.603);
+}
+
+.btn:hover {
+    color: var(--bg);
+    background-color: var(--btn-hover);
+    box-shadow: none;
+    padding: 1.8rem;
+
+}
+
+.err {
+    padding: 10px;
+    color: red;
+    width: 70%;
+    font-size: 1.5rem;
+}
+
+.hide {
+    display: none;
+}
+@media only screen and (max-width:500px) {
+    body{
+        font-size: 10px;
+    }
+}
